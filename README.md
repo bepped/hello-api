@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 # hello-api
-=======
+
 # Hello API
 ## Release Milestones
 
@@ -30,4 +29,3 @@
 
 
 ## Release Milestones
->>>>>>> 9064887 (Start up)
