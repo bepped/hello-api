@@ -22,7 +22,7 @@ func main() {
 				Translation: "Hello",
 			}
 			if err := enc.Encode(resp); err != nil {
-				panic(err)
+				panic("unable to encode response")
 			}
 		})
 
