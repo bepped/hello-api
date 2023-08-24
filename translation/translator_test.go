@@ -2,7 +2,7 @@ package translation_test
 
 import (
 	"testing"
-	"https://github.com/bepped/hello-api/translation"
+	"github.com/bepped/hello-api/translation"
 )
 
 func TestTranslate(t *testing.T) {
