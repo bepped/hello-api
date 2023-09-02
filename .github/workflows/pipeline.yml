@@ -50,8 +50,8 @@ jobs:
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with: 
-          tag_name: ${{ github.ref}}
-          release_name: Release ${{ github.ref}}
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
           body: |
             Still in experimentation phase
           draft: true
@@ -91,7 +91,7 @@ jobs:
             cp api artifacts/.
 
     - name: Archive
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
           name: api 
           path: artifacts 
