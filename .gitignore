@@ -24,3 +24,5 @@ go.work
 # vendor /
 
 api
+covrage.out
+cover.html
