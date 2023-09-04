@@ -37,10 +37,11 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
           name: reports
-          path: reports
+          path: reports1
   format-check:
     name: Check Formatting
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
     - name: Set up Go 1.x
       uses: actions/setup-go@v3
