@@ -13,6 +13,7 @@ jobs:
       - format-check
     name: Test Application
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
     - name: Set up Go 1.x
       uses: actions/setup-go@v3
