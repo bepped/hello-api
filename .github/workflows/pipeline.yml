@@ -37,7 +37,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
           name: reports
-          path: reports1
+          path: reports
   format-check:
     name: Check Formatting
     runs-on: ubuntu-latest
