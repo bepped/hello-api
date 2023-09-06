@@ -1,8 +1,8 @@
 GO_VERSION :=1.20
 
-.PHONY: install-go init-go
+.PHONY: install-go init-go install-lint
 
-setup: install-go init-go
+setup: install-go init-go install-lint
 
 
 #TODO add MacOS support
@@ -14,6 +14,13 @@ install-go:
 init-go:
 	echo 'export PATH=$$PATH:/usr/local/go/bin' >> $${HOME}/.bashrc
 	echo 'export PATH=$$PATH:$${HOME}/go/bin' >> $${HOME}/.bashrc
+
+install-lint:
+	sudo curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh\
+	| sh -s -- -b $$(go env GOPATH)/bin v1.54.2
+
+static-check:
+	golangci-lint run
 
 test:
 	go test ./... -coverprofile=coverage.out
