@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"github.com/bepped/hello-api/handlers/rest"
+	"github.com/bepped/hello-api/translation"
 )
 
 func main() {
@@ -18,7 +19,9 @@ func main() {
 
 	mux := http.NewServeMux()
 
-	mux.HandleFunc("/hello", rest.TranslateHandler)
+	translationService := translation.NewStaticService()
+	translateHandler := rest.NewTranslateHandler(translationService)
+	mux.HandleFunc("/hello", translateHandler.TranslateHandler)
 
 	srv := &http.Server{
 		Addr:              addr,

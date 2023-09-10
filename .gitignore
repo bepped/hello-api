@@ -26,3 +26,4 @@ go.work
 api
 covrage.out
 cover.html
+example.go
